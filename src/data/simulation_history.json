@@ -1,0 +1,50 @@
+[
+    {
+        "id": "dec-001",
+        "timestamp": "2026-02-28T10:00:00Z",
+        "employee_id": "EMP-042",
+        "employee_name": "Elena Rodriguez",
+        "strategy_tested": [
+            "baseline",
+            "aggressive",
+            "conservative"
+        ],
+        "best_strategy": "aggressive",
+        "comparison_matrix": {},
+        "profit_delta": 45000,
+        "stability_score": 0.88,
+        "fragility_score": 0.22,
+        "model_version": "v3.0",
+        "seed": 42,
+        "shock_mode": false,
+        "llm_summary": {
+            "recommendation": "Aggressive replacement is recommended due to high centrality and low external market availability for this specific skill set.",
+            "confidence": 0.92,
+            "latency_ms": 1100
+        }
+    },
+    {
+        "id": "dec-002",
+        "timestamp": "2026-02-28T11:30:00Z",
+        "employee_id": "EMP-015",
+        "employee_name": "Marcus Chen",
+        "strategy_tested": [
+            "baseline",
+            "no_replace",
+            "immediate"
+        ],
+        "best_strategy": "immediate",
+        "comparison_matrix": {},
+        "profit_delta": -12000,
+        "stability_score": 0.95,
+        "fragility_score": 0.15,
+        "model_version": "v3.0",
+        "seed": 42,
+        "shock_mode": true,
+        "llm_summary": {
+            "recommendation": "Immediate replacement is critical despite the cost, as the 'no_replace' scenario leads to a 40% drop in engineering velocity.",
+            "confidence": 0.96,
+            "latency_ms": 950
+        }
+    }
+]
