@@ -1,0 +1,2 @@
+:HL["/_next/static/chunks/e92126140e31c5c8.css","style"]
+0:{"buildId":"vp8f-_cdAhPME8-ynUI26","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"copilot","paramType":null,"paramKey":"copilot","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

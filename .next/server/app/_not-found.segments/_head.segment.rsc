@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/ce854fccb8f62af8.js","/_next/static/chunks/a43dcaf778df3af5.js","/_next/static/chunks/c7542caa9066774b.js","/_next/static/chunks/521c854fe5bb5bad.js","/_next/static/chunks/8ce1b659f4d14431.js"],"ViewportBoundary"]
+3:I[97367,["/_next/static/chunks/ce854fccb8f62af8.js","/_next/static/chunks/a43dcaf778df3af5.js","/_next/static/chunks/c7542caa9066774b.js","/_next/static/chunks/521c854fe5bb5bad.js","/_next/static/chunks/8ce1b659f4d14431.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"vp8f-_cdAhPME8-ynUI26","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Workforce Compass"}],["$","meta","1",{"name":"description","content":"Workforce Digital Twin Platform"}]]}]}]}],null]}],"loading":null,"isPartial":false}

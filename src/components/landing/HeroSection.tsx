@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client"
+
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -24,7 +26,7 @@ export function HeroSection() {
           compare HR strategies side-by-side, and receive AI-generated strategic
           recommendations — all in real time.
         </p>
-        <Link to="/dashboard">
+        <Link href="/dashboard">
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}

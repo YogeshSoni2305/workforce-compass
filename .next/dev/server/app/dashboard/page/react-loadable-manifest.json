@@ -1,0 +1,11 @@
+{
+  "[project]/src/components/simulation/OrgGraph.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/simulation/OrgGraph.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_611f2e81._.js",
+      "static/chunks/src_components_78b544f9._.js",
+      "static/chunks/node_modules_reactflow_dist_style_58d81dac.css",
+      "static/chunks/src_components_simulation_OrgGraph_tsx_980d461f._.js"
+    ]
+  }
+}

@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HistoryRecord, useSimulationStore } from "@/store/simulationStore";
@@ -15,7 +17,7 @@ import {
     Quote
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 interface PreviewProps {
@@ -25,7 +27,7 @@ interface PreviewProps {
 
 export function SnapshotPreviewPanel({ record }: PreviewProps) {
     const { replayHistory } = useSimulationStore();
-    const navigate = useNavigate();
+    const router = useRouter();
 
     if (!record) {
         return (
@@ -45,7 +47,7 @@ export function SnapshotPreviewPanel({ record }: PreviewProps) {
 
     const handleReplay = () => {
         replayHistory(record.id);
-        navigate("/dashboard");
+        router.push("/dashboard");
         toast.success(`Replaying simulation for ${record.employee_name}`);
     };
 

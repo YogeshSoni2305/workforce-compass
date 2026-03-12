@@ -1,3 +1,5 @@
+"use client"
+
 import React, { memo } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
 import { RiskBadge } from "@/components/ui/RiskBadge";

@@ -1,3 +1,5 @@
+"use client"
+
 import { create } from "zustand";
 
 export type Strategy = "baseline" | "aggressive" | "conservative" | "immediate" | "delayed" | "no_replace";

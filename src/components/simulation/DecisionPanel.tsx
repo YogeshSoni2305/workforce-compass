@@ -1,3 +1,5 @@
+"use client"
+
 // import { useState } from "react";
 // import { useSimulationStore, KPIResult, ComparisonResult } from "@/store/simulationStore";
 // import { compareStrategies, explainDecision } from "@/lib/api";

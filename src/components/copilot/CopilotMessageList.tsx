@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { CopilotMessage, Strategy } from "@/store/simulationStore";
 import { cn } from "@/lib/utils";

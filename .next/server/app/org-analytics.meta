@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/org-analytics/layout,_N_T_/org-analytics/page,_N_T_/org-analytics"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/org-analytics/__PAGE__",
+    "/org-analytics",
+    "/_index",
+    "/_head"
+  ]
+}

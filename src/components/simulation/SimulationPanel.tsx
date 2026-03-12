@@ -1,3 +1,5 @@
+"use client"
+
 import { useSimulationStore, Strategy, KPIResult } from "@/store/simulationStore";
 import { simulateScenario } from "@/lib/api";
 import { Button } from "@/components/ui/button";

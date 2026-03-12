@@ -1,8 +1,19 @@
-export const API_BASE = "http://localhost:8000";
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
+async function safeFetch<T>(url: string, options?: RequestInit, fallback?: T): Promise<T> {
+  try {
+    const res = await fetch(url, options);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  } catch (err) {
+    console.warn(`[API] Failed: ${url}`, err);
+    if (fallback !== undefined) return fallback;
+    throw err;
+  }
+}
 
 export async function fetchOrgData() {
-  const res = await fetch(`${API_BASE}/org/state`);
-  return res.json();
+  return safeFetch(`${API_BASE}/org/state`, undefined, { nodes: [], edges: [] });
 }
 
 export async function simulateScenario(payload: {
@@ -11,42 +22,38 @@ export async function simulateScenario(payload: {
   seed: number;
   shock_test: boolean;
 }) {
-  const res = await fetch(`${API_BASE}/simulate`, {
+  return safeFetch(`${API_BASE}/simulate`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 export async function compareStrategies(payload: {
   employee_id: string | null;
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/decision/compare`, {
+  return safeFetch(`${API_BASE}/decision/compare`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 export async function explainDecision(payload: {
   employee_id: string | null;
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/decision/explain`, {
+  return safeFetch(`${API_BASE}/decision/explain`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 // Phase 6: Predictive Intelligence
 export async function fetchAttritionPrediction(seed: number = 42) {
-  const res = await fetch(`${API_BASE}/predict/attrition?seed=${seed}`);
-  return res.json();
+  return safeFetch(`${API_BASE}/predict/attrition?seed=${seed}`, undefined, []);
 }
 
 export async function predictHiringImpact(payload: {
@@ -54,12 +61,11 @@ export async function predictHiringImpact(payload: {
   hiring_delay_weeks: number;
   ramp_up_curve: number;
 }) {
-  const res = await fetch(`${API_BASE}/predict/hiring-impact`, {
+  return safeFetch(`${API_BASE}/predict/hiring-impact`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 export async function predictTrajectory(payload: {
@@ -67,12 +73,11 @@ export async function predictTrajectory(payload: {
   attrition_multiplier: number;
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/predict/trajectory`, {
+  return safeFetch(`${API_BASE}/predict/trajectory`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
-  });
-  return res.json();
+  }, []);
 }
 
 // Phase 8: Decision OS
@@ -81,12 +86,11 @@ export async function simulatePortfolio(payload: {
   priorities: Record<string, number>;
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/portfolio/simulate`, {
+  return safeFetch(`${API_BASE}/portfolio/simulate`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 export async function allocateBudget(payload: {
@@ -95,12 +99,11 @@ export async function allocateBudget(payload: {
   training_investment: number;
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/budget/allocate`, {
+  return safeFetch(`${API_BASE}/budget/allocate`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 export async function strategicInvestment(payload: {
@@ -108,12 +111,11 @@ export async function strategicInvestment(payload: {
   amount: number;
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/strategy/investment`, {
+  return safeFetch(`${API_BASE}/strategy/investment`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }
 
 export async function mergeOrgs(payload: {
@@ -121,10 +123,9 @@ export async function mergeOrgs(payload: {
   merge_type: "aggressive" | "gradual" | "selective";
   seed: number;
 }) {
-  const res = await fetch(`${API_BASE}/strategy/merge`, {
+  return safeFetch(`${API_BASE}/strategy/merge`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  return res.json();
 }

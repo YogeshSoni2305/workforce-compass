@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/budget-strategy/page": "/budget-strategy",
+  "/copilot/page": "/copilot",
+  "/dashboard/page": "/dashboard",
+  "/decision-history/page": "/decision-history",
+  "/ma-modeling/page": "/ma-modeling",
+  "/org-analytics/page": "/org-analytics",
+  "/page": "/",
+  "/portfolio-simulation/page": "/portfolio-simulation",
+  "/predictive-intelligence/page": "/predictive-intelligence",
+  "/scenario-lab/page": "/scenario-lab"
+}

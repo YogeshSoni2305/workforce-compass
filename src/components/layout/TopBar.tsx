@@ -1,17 +1,13 @@
-import { useTheme } from "next-themes";
+"use client"
+
 import {
-    Sun,
-    Moon,
     ShieldCheck,
     Clock,
-    Activity,
     User
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function TopBar() {
-    const { theme, setTheme } = useTheme();
-
     return (
         <header className="h-16 border-b border-border bg-background/95 backdrop-blur shrink-0 flex items-center justify-between px-8 z-10">
             <div className="flex items-center gap-6">
@@ -34,14 +30,7 @@ export function TopBar() {
             </div>
 
             <div className="flex items-center gap-3">
-                <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full w-9 h-9 border-border/60 hover:bg-secondary"
-                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                    {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                </Button>
+                <ThemeToggle />
                 <div className="h-8 w-px bg-border mx-1" />
                 <div className="flex items-center gap-3 pl-2">
                     <div className="flex flex-col items-end">

@@ -1,0 +1,12 @@
+{
+  "/budget-strategy/page": "app/budget-strategy/page.js",
+  "/copilot/page": "app/copilot/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/decision-history/page": "app/decision-history/page.js",
+  "/ma-modeling/page": "app/ma-modeling/page.js",
+  "/org-analytics/page": "app/org-analytics/page.js",
+  "/page": "app/page.js",
+  "/portfolio-simulation/page": "app/portfolio-simulation/page.js",
+  "/predictive-intelligence/page": "app/predictive-intelligence/page.js",
+  "/scenario-lab/page": "app/scenario-lab/page.js"
+}
